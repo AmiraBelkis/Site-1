@@ -1,0 +1,536 @@
+/*-----------------My page defult shit-------------------*/
+
+nav,
+header,
+footer {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+    /*evry thing stack to the edge of the page */
+}
+
+label {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    margin: 2%;
+}
+
+p {
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+button {
+    margin: 5px;
+}
+
+
+/*-----------------My nav bar shit-------------------*/
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    background-color: rgb(2, 22, 43);
+    overflow: hidden;
+    /*for mobile view */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+    /*to make them horizamtal in the left side */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: floralwhite;
+    display: block;
+    min-height: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li.rightSide {
+    float: right;
+}
+
+nav ul li:not(:nth-child(6)) a:hover {
+    background-color: #009688;
+    background-size: cover;
+    color: ghostwhite;
+    font-weight: bolder;
+}
+
+.droppedDownIcon {
+    display: none;
+}
+
+
+/*---------------Menu Btn animation----------------------*/
+
+body {
+    background: #000000;
+    color: #fff;
+}
+
+.nav-toggle {
+    padding: 0em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+    outline: none;
+    background-image: none;
+}
+
+.nav-open .menuBtn {
+    transform: rotate(.625turn);
+}
+
+.nav-open .menuBtn::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .menuBtn::after {
+    opacity: 0;
+}
+
+.menuBtn {
+    display: block;
+    position: relative;
+}
+
+.menuBtn,
+.menuBtn::after,
+.menuBtn::before {
+    background: #fff;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.menuBtn::after,
+.menuBtn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.menuBtn::before {
+    top: 6px;
+}
+
+.menuBtn::after {
+    bottom: 6px;
+}
+
+
+/*-----------------  -------------------*/
+
+.container {
+    width: 100%;
+    margin: auto;
+    /* helps to keep every thing in centre*/
+    padding-top: 2%;
+    padding-bottom: 5%;
+    /**/
+}
+
+#section-1-gradient {
+    background-color: #0f233d;
+    /*in cas browser does'nt support gradient*/
+    background-image: linear-gradient(to bottom right, #0f233d, hsl(182, 25%, 50%));
+}
+
+
+/*--------------LOGIN-------------------------*/
+
+.box {
+    width: 400px;
+    transform: translate(5%, 10%, 5%);
+    left: 18%;
+    right: 20%;
+    padding: 40px;
+    margin: auto;
+    display: block;
+    background: #191919;
+    text-align: center;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+.box:hover {
+    opacity: 1;
+}
+
+.box h1 {
+    color: azure;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid hsl(182, 25%, 50%);
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: azure;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 250px;
+    border-color: hsl(182, 25%, 50%);
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #609d9f;
+    padding: 14px 40px;
+    outline: none;
+    color: azure;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: hsl(182, 25%, 50%);
+}
+
+
+/*---------------right left part-----------------*/
+
+.leftSideCol {
+    margin-left: 0%;
+}
+
+
+/*---------------------------------------------*/
+
+
+/*-----------------section-2---------------------*/
+
+.sec-2-head {
+    text-align: center;
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #2a4e6e;
+    padding-top: 8%;
+}
+
+.Box {
+    margin: 15px 24px;
+    padding: 30px 24px 50px 24px;
+    height: 300px;
+    display: block;
+    background: #364c5fc4;
+    text-align: center;
+    border-radius: 10%;
+    opacity: 0.8;
+}
+
+.Box:hover {
+    opacity: 1;
+}
+
+
+/*------------Learn more Btn Animation --------------------*/
+
+
+/*-----------Ripple Hover Effect----------------*/
+
+
+/*---------- From :  https://www.instagram.com/p/CIIFIKOg2wi/?utm_source=ig_web_copy_link  ----------*/
+
+.LearnMore {
+    margin-top: 0px;
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    color: azure;
+    background-color: #3498eb;
+    text-align: center;
+    font-size: 30px;
+    padding: 12px 50px;
+}
+
+.HOVER {
+    --width: 100%;
+    --time: 0.7s;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.HOVER text {
+    position: relative;
+    z-index: 5;
+    transition: color var(--time);
+}
+
+.HOVER span {
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: 0;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: width var(--time), padding-top var(--time);
+}
+
+.HOVER:hover span {
+    width: calc(var(--width)*2.25);
+    padding-top: calc(var(--width)*2.25);
+}
+
+.HOVER.FLASH:hover text {
+    color: white;
+}
+
+.HOVER.FLASH span {
+    background: #0f233d;
+}
+
+.animated {
+    --angle: 5deg;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    25% {
+        transform: rotate(calc(var(--angle)*-1));
+    }
+    50% {
+        transform: rotate(calc(var(--angle)));
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/*----------------Section-3-----------------------*/
+
+article p {
+    padding: 10px 50px;
+    margin: 0;
+}
+
+article h1 {
+    margin: 0;
+    padding: 10px 55px;
+    text-shadow: hsl(182, 25%, 50%);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+div.image img {
+    /*---- you need to take the parent and the child or the margin auto won't work ----*/
+    display: block;
+    margin: auto;
+    box-shadow: -2px/*Hrzntl*/
+    -2px/*vrtcl*/
+    5px/*blrt*/
+    2px/*sprd*/
+    hsl(182, 25%, 50%);
+}
+
+
+/*----------------Footer-------------------------*/
+
+footer.Sec-foot {
+    animation-name: color;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    padding-left: 10%;
+}
+
+footer.Sec-foot ul {
+    padding-inline-start: 5%;
+    list-style: none;
+    text-align: left;
+    font-size: 25px;
+    margin-top: auto;
+    line-height: 1.2;
+}
+
+
+/*----------------Rows and COl--------------------*/
+
+.row {
+    width: 100%;
+    /*too add special attribut*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/*#52010f #0f233d   #2a4e6e  #a52227 */
+
+
+/*-------------Animation--------------------*/
+
+@keyframes color {
+    0% {
+        background-color: rgb(0, 6, 15);
+    }
+    25% {
+        background-color: rgb(1, 14, 35);
+    }
+    50% {
+        background-color: rgb(3, 25, 50);
+    }
+    75% {
+        background-color: rgb(1, 14, 35);
+    }
+    100% {
+        background-color: rgb(0, 6, 15);
+    }
+}
+
+
+/*-----------------Mobile-------------------*/
+
+@media screen and (max-width:600px) {
+    nav ul li {
+        float: none;
+    }
+    nav ul li:not(:nth-child(7)) {
+        display: none;
+    }
+    nav ul li.droppedDownIcon {
+        display: block;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .responsive {
+        position: relative;
+    }
+    nav ul.responsive li {
+        display: inline;
+        float: none;
+        text-align: left;
+    }
+    nav ul.responsive li a {
+        display: block;
+        text-align: left;
+    }
+    .col-6,
+    .col-4,
+    .col-7,
+    .col-5 {
+        width: 100%;
+        margin: 0;
+    }
+    .col-3 {
+        width: 50%;
+        margin: 0;
+        display: block;
+    }
+    .rightSideColrightSideCol {
+        width: 100%;
+    }
+    .leftSideCol {
+        margin-right: 10%;
+        margin-bottom: 10%;
+    }
+    div.image img {
+        width: 80%;
+        margin: auto;
+        margin-top: 10%;
+    }
+}
