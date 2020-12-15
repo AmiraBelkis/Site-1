@@ -31,6 +31,13 @@ p {
     font-size: 18px;
 }
 
+.intro {
+    padding-top: 5%;
+    padding-left: 2%;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 button {
     margin: 5px;
 }
@@ -146,7 +153,7 @@ body {
 }
 
 
-/*-----------------  -------------------*/
+/*-----------------section-1-------------------*/
 
 .container {
     width: 100%;
@@ -166,18 +173,44 @@ body {
 
 /*--------------LOGIN-------------------------*/
 
+
+/* this is to make an area unclickebale*/
+
+.blocked:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: transparent;
+}
+
+.blocked {
+    position: relative;
+    opacity: 0.05;
+}
+
+.HideIt {
+    opacity: 0;
+    pointer-events: none;
+    /*this is to make element unclickable*/
+}
+
 .box {
-    width: 400px;
-    transform: translate(5%, 10%, 5%);
-    left: 18%;
-    right: 20%;
-    padding: 40px;
-    margin: auto;
     display: block;
+    margin: auto;
+    width: 450px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
     background: #191919;
     text-align: center;
     border-radius: 10%;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .box:hover {
@@ -192,14 +225,15 @@ body {
 
 .box input[type="text"],
 .box input[type="password"] {
+    font-size: 18px;
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid hsl(182, 25%, 50%);
+    border: 2px solid #3498eb;
     padding: 14px 10px;
-    width: 200px;
+    width: 225px;
     outline: none;
     color: azure;
     border-radius: 24px;
@@ -208,17 +242,19 @@ body {
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
-    width: 250px;
-    border-color: hsl(182, 25%, 50%);
+    font-size: 20px;
+    width: 275px;
+    border-color: darkcyan;
 }
 
 .box input[type="submit"] {
+    font-size: 20px;
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #609d9f;
+    border: 2px solid darkcyan;
     padding: 14px 40px;
     outline: none;
     color: azure;
@@ -228,7 +264,54 @@ body {
 }
 
 .box input[type="submit"]:hover {
-    background: hsl(182, 25%, 50%);
+    font-weight: bold;
+    background: darkcyan;
+}
+
+.UserIcon {
+    display: block;
+    margin: auto;
+    border-radius: 60%;
+    width: 150px;
+    height: 150px;
+    border: solid 5px #3498eb;
+    padding: 12px;
+}
+
+.UserIcon:hover {
+    border: solid 5px darkcyan;
+}
+
+.forgetPassword {
+    font-weight: 200;
+    font-size: 18px;
+    padding-top: 8%;
+}
+
+.forgetPassword a {
+    color: #3498eb;
+    text-decoration: underline;
+}
+
+.SignLogMenu {
+    width: 55%;
+    padding: 0;
+    margin: auto;
+    background: transparent;
+    font-size: 25px;
+}
+
+.Selected {
+    font-weight: bolder;
+    border-bottom: 5px solid #007696;
+}
+
+nav ul.SignLogMenu li:not(.Selected) a:hover {
+    border-bottom: 5px solid #5e0997;
+}
+
+nav ul.SignLogMenu li a:hover {
+    background-color: transparent;
 }
 
 
@@ -490,6 +573,10 @@ footer.Sec-foot ul {
     nav ul li:not(:nth-child(7)) {
         display: none;
     }
+    nav ul.SignLogMenu li {
+        display: inline-block;
+        margin: auto;
+    }
     nav ul li.droppedDownIcon {
         display: block;
         float: right;
@@ -532,5 +619,11 @@ footer.Sec-foot ul {
         width: 80%;
         margin: auto;
         margin-top: 10%;
+    }
+    div .iframTest iframe {
+        padding-left: 5%;
+        margin: auto;
+        width: 450px;
+        height: 275px;
     }
 }

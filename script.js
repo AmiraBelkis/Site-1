@@ -25,3 +25,50 @@ ELEMENTS.forEach((element, index) => {
     if (!ELEMENTS_SPAN[index])
         ELEMENTS_SPAN[index] = element.querySelector("span");
 });
+/*-------------Login----------------------*/
+try {
+
+    var db = openDatabase('MySiteDB', '1.0', 'DB', 8 * 1024 * 1024);
+    db.transaction(function(tx) {
+        tx.executeSql(`CREATE TABLE IF NOT EXISTS  user (UserID ,UserName,UserPassword)`);
+        tx.executeSql('INSERT INTO user  VALUES (1, "@User_name" , "0000")');
+    });
+
+} catch (error) {
+    alert(error.tostring());
+};
+
+function Login(event) {
+    let UserName = document.getElementById("User name").value;
+    let Password = document.getElementById("password").value;
+    if (UserName && Password) {
+        try {
+            var db = openDatabase('SiteDB', '1.0', 'DB', 8 * 1024 * 1024);
+            db.transaction(function(tx) {
+                tx.executeSql('SELECT * FROM USER WHERE UserName = ' + UserName + ' AND UserPassword = ' + Password);
+            });
+        } catch (error) {
+            alert(error.tostring());
+        }
+    } else
+        alert("Please fill out your login information");
+    event.preventDefault();
+}
+let MyForm = document.getElementById("MyForm");
+MyForm.addEventListener("submit", function(event) {
+    let UserName = document.getElementById("User name").value;
+    let Password = document.getElementById("password").value;
+    if (UserName && Password) {
+        try {
+            var db = openDatabase('SiteDB', '1.0', 'DB', 8 * 1024 * 1024);
+            db.transaction(function(tx) {
+                tx.executeSql('SELECT * FROM USER WHERE UserName = ' + UserName + ' AND UserPassword = ' + Password);
+            });
+
+        } catch (error) {
+            alert(error.tostring());
+        }
+    } else
+        alert("Please fill out your login information");
+    event.preventDefault();
+});
