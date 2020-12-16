@@ -193,7 +193,7 @@ body {
 }
 
 .HideIt {
-    opacity: 0;
+    opacity: 0.05;
     pointer-events: none;
     /*this is to make element unclickable*/
 }
@@ -272,8 +272,8 @@ body {
     display: block;
     margin: auto;
     border-radius: 60%;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     border: solid 5px #3498eb;
     padding: 12px;
 }
@@ -307,10 +307,11 @@ body {
 }
 
 nav ul.SignLogMenu li:not(.Selected) a:hover {
-    border-bottom: 5px solid #5e0997;
+    border-bottom: 5px solid #0a2ea3b7;
 }
 
 nav ul.SignLogMenu li a:hover {
+    cursor: pointer;
     background-color: transparent;
 }
 

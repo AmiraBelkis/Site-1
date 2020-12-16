@@ -72,3 +72,48 @@ MyForm.addEventListener("submit", function(event) {
         alert("Please fill out your login information");
     event.preventDefault();
 });
+/*-------------------switch signe-------------*/
+function SwitchSigne(child) {
+    var selectedClass = "Selected";
+    var Login = document.getElementById("Login");
+    var SigneUp = document.getElementById("Signe Up");
+
+    if ((child === 'Signe Up') && (Login.className === selectedClass)) {
+        var TheForm = document.getElementById('SigneInUp');
+        TheForm.innerHTML = ` <form class="box" id="MyLoginForm" autocomplete="off">
+        <nav>
+            <ul id="MenuList" class="SignLogMenu">
+                <li id="Login" ><a onclick="SwitchSigne('Login')">Login</a></li>
+                <li id="Signe Up" class="Selected"><a onclick="SwitchSigne('Signe Up')">Signe Up</a></li>
+            </ul>
+        </nav>
+        <hr width="60%">
+        <h1>Welcome</h1>
+        <img src="./src/User.png" class="UserIcon">
+        <input type="text" id="User name" placeholder="User name" required>
+        <input type="text" id="User name" placeholder="Email@exemple.com" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="submit" name="submit" value="Signe up">
+        <hr width="60%">
+    </form>`;
+    } else if ((child === 'Login') && (SigneUp.className === selectedClass)) {
+        var TheForm = document.getElementById('SigneInUp');
+        TheForm.innerHTML = ` <form class="box" id="MyLoginForm" autocomplete="off">
+        <nav>
+            <ul id="MenuList" class="SignLogMenu">
+                <li id="Login" class="Selected"><a onclick="SwitchSigne('Login')">Login</a></li>
+                <li id="Signe Up"><a onclick="SwitchSigne('Signe Up')">Signe Up</a></li>
+            </ul>
+        </nav>
+        <hr width="60%">
+        <h1>Welcome</h1>
+        <img src="./src/User.png" class="UserIcon">
+        <input type="text" id="User name" placeholder="User name" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <text class="forgetPassword">Forgot <a href="#">password ?</a></text>
+        <input type="submit" name="submit" value="Login">
+        <hr width="60%">
+    </form>`;
+    }
+
+}
