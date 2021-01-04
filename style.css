@@ -75,6 +75,7 @@ nav ul li a {
 
 nav ul li.rightSide {
     float: right;
+    cursor: pointer;
 }
 
 nav ul li:not(:nth-child(6)) a:hover {
@@ -203,8 +204,8 @@ body {
     margin: auto;
     width: 450px;
     padding: 40px;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
     background: #191919;
@@ -306,7 +307,7 @@ body {
     border-bottom: 5px solid #007696;
 }
 
-nav ul.SignLogMenu li:not(.Selected) a:hover {
+nav ul.SignLogMenu li:hover {
     border-bottom: 5px solid #0a2ea3b7;
 }
 
